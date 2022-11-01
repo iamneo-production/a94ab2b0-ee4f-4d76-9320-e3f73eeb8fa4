@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
 const tokenRoutes = require("./routes/tokenRoutes");
 const transactionRoutes = require("./routes/transactionRoutes");
 const balanceRoutes = require("./routes/balanceRoutes");
@@ -9,6 +10,8 @@ app.use(express.json());
 app.use((req, res, next) => {
   next();
 });
+//
+app.use(cors());
 
 // routes
 app.use("/api/token", tokenRoutes);
