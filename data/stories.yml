@@ -6,6 +6,7 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+  - action: action_hello_world
   - intent: mood_great
   - action: utter_happy
 
