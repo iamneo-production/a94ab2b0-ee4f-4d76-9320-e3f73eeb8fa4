@@ -7,15 +7,30 @@ const Web3js = new Web3(
   )
 );
 
-const privateKey = process.env.PIRVATE_KEY;
+const privateKey =
+  "0x95aa2ffd4e9cc7b6f79494fa644243f18f50094023ccf2286a64804b1623ff92";
 
 let tokenAddress = process.env.TOKEN_ADDRESS;
-
+const fetchToAddress = async (req, res) => {
+  const promise = await axios
+    .get("http://localhost:5000/api/token/568989089594")
+    .then((response) => {
+      const data = response.data;
+      return data;
+    });
+  return promise;
+};
 let toAddress = "0x8E7A5aF22aB3B208e2E2DD9cc2E0a26869c1dd17";
-
+const test = () =>
+  fetchToAddress().then((address) => {
+    const fromAcc = address[0].polygon_acct;
+    return fromAcc;
+  });
 let fromAddress = "0xb1e2c87C4f58bB9d06189734843D8D20B5C2fBeD";
 let amountToBe = "0.01";
-
+test().then((response) => {
+  console.log(response);
+});
 let contractABI = [
   // transfer
 
@@ -84,7 +99,6 @@ function sendErcToken() {
             console.log(err);
           } else {
             console.log(res);
-            console.log("hi");
           }
         }
       );
@@ -110,3 +124,4 @@ function sendErcToken() {
 // };
 // finalTransaction();
 // module.exports = finalTransaction;
+sendErcToken();

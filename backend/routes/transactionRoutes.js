@@ -1,8 +1,11 @@
 const express = require("express");
-// const finalTransaction = require("../token/tokenTransfer");
-
 const router = express.Router();
+const {
+  createTransactionLog,
+  getTransactionLog,
+} = require("../controllers/transactionControllers");
 
-// router.get("/:id", finalTransaction);
+router.post("/", createTransactionLog);
+router.get("/:id", getTransactionLog);
 
 module.exports = router;

@@ -36,7 +36,7 @@ const getClaimCheque = async (req, res) => {
 
 const acceptPayment = async (req, res) => {
   const { id } = req.params;
-  const accept = await Cheque.up;
+  const accept = await Cheque.updateOne({ email: id }, { $pull: {} });
 };
 
 module.exports = {
