@@ -8,6 +8,8 @@ const createTokenData = async (req, res) => {
     const token = await Token.create({
       _acctn,
       polygon_acct,
+      tokenBalance,
+      redeemToken,
     });
     res.status(200).json(token);
   } catch (error) {

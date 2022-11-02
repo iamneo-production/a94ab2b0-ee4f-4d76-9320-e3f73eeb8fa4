@@ -4,6 +4,7 @@ const cors = require("cors");
 const tokenRoutes = require("./routes/tokenRoutes");
 const transactionRoutes = require("./routes/transactionRoutes");
 const balanceRoutes = require("./routes/balanceRoutes");
+const chequeRoutes = require("./routes/chequeRoutes");
 const app = express();
 require("dotenv").config();
 app.use(express.json());
@@ -17,6 +18,7 @@ app.use(cors());
 app.use("/api/token", tokenRoutes);
 app.use("/api/getbalance", balanceRoutes);
 app.use("/api/transaction", transactionRoutes);
+app.use("/api/virtualcheque/", chequeRoutes);
 
 // connect
 mongoose.connect(process.env.URI).then(() => {
