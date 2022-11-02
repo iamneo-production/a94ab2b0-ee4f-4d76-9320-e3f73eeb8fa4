@@ -1,6 +1,9 @@
 [phases.setup]
 nixPkgs = ['nodejs', 'yarn']
 
+[phases.build]
+cmds = ['echo building!']
+
 [phases.install]
 cmds = ['yarn install --frozen-lockfile']
 
