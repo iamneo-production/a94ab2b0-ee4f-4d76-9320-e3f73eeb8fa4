@@ -7,12 +7,13 @@ const userLogin = {
 
 const userSchema = {
   ...userLogin,
+
+  account_no: yup.string().length(10).trim(),
+  pin: yup.string().length(6).required().trim(),
+  phone: yup.string().length(10).required().trim(),
   name: yup.string().required().trim(),
-  phone: yup.string().length(10),
-  account_no: yup.string().length(10),
-  pin: yup.string().length(4),
-  cvv: yup.string().length(3),
-  expiry: yup.string().length(5),
+
+  bank_name: yup.string().default("dot-pay").required().trim(),
   kyc: yup.bool().default(false),
 };
 

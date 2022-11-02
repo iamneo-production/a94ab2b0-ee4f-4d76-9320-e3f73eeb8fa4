@@ -18,7 +18,7 @@ export function requestValidation(
         _location = req.body;
     }
     try {
-      await schema.validate(_location);
+      req.body = await schema.validate(_location);
       next();
     } catch (err) {
       next(new errorClass(res, err.message, 500));
