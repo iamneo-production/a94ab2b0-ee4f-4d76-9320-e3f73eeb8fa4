@@ -2,7 +2,7 @@ import * as yup from "yup";
 
 const kycLogin = {
   email: yup.string().email().required(),
-  password: yup.string().required(),
+  pin: yup.string().required(),
 };
 
 const kycRegister = {
@@ -15,7 +15,7 @@ const kycSchema = {
   uid: yup.string().length(10),
   pan: yup.object(),
   aadhar: yup.object(),
-  signature: yup.mixed(),
+  signature: yup.object(),
 };
 
 export const loginSchema = new yup.ObjectSchema(kycLogin);

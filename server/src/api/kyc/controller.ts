@@ -1,6 +1,6 @@
 import { compare, hash } from "bcrypt";
 import { NextFunction } from "express";
-import { signJwt } from "../../shared/services/jwtService";
+import { signJwt, verifyJwt } from "../../shared/services/jwtService";
 import database from "../../loaders/database";
 import errorClass from "../../shared/error";
 import { Response } from "express";
@@ -12,7 +12,7 @@ export const register = async (
   res: Response,
 ) => {
   try {
-    const password = req.body.password;
+    const pin = req.body.pin;
 
     // Check for exisiting users
     const databaseResponse = await (await database())
@@ -24,12 +24,12 @@ export const register = async (
     // Adding user
     const newUser: any = {
       ...req.body,
-      password: await hash(password, 14),
+      pin: await hash(pin, 14),
     };
 
     await (await database()).collection("kyc-users").insertOne({ ...newUser });
 
-    delete newUser.password;
+    delete newUser.pin;
 
     return { success: true, user: newUser };
   } catch (err) {
@@ -56,5 +56,34 @@ export const userLogin = async (
   } catch (error) {
     next(new errorClass(res, error.message, 501));
     return;
+  }
+};
+
+export const update = async (
+  req: KycRequest,
+  next: NextFunction,
+  res: Response,
+) => {
+  try {
+    const email = (await verifyJwt(req.headers.authorization?.split(" ")[1]!))
+      .email;
+    const oldData = await (await database())
+      .collection("kyc-users")
+      .findOne({ email });
+    if (oldData == null) throw new Error("User does not exist");
+    await (await database()).collection("kyc-users").updateOne(
+      { email },
+      {
+        $set: {
+          pan: req.body.pan || oldData!.pan,
+          aadhar: req.body.aadhar || oldData!.aadhar,
+          signature: req.body.signature || oldData!.signature,
+        },
+      },
+    );
+    return { success: true };
+  } catch (error) {
+    next(new errorClass(res, error.message, 501));
+    return { success: false };
   }
 };
