@@ -25,11 +25,10 @@ const createLabel = async (req, res) => {
   }
 };
 
-// get labels
+// get single label from _acctn
 const getLabel = async (req, res) => {
   const { id } = req.params;
 
-  // get single label from _acctn
   const labelData = await Label.findOne({ _acctn: id });
   if (!labelData) {
     res.status(400).json({ message: "no label found" });
@@ -45,7 +44,7 @@ const updateLabel = async (req, res) => {
 
   const { currentAmt } = req.body;
   const labelData = await Label.findOneAndUpdate(
-    { _acctn: id },
+    { label_name: id },
     { currentAmt },
     { new: true }
   );
