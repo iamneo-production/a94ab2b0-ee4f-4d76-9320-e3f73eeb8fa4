@@ -8,5 +8,5 @@ const {
 
 router.post("/", createLabel);
 router.get("/:id", getLabel);
-router.delete("/:id", updateLabel);
+router.patch("/:id", updateLabel);
 module.exports = router;
