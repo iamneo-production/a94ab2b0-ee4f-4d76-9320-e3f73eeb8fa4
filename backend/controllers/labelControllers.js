@@ -29,7 +29,7 @@ const createLabel = async (req, res) => {
 const getLabel = async (req, res) => {
   const { id } = req.params;
 
-  const labelData = await Label.findOne({ _acctn: id });
+  const labelData = await Label.find({ _acctn: id });
   if (!labelData) {
     res.status(400).json({ message: "no label found" });
   } else {
