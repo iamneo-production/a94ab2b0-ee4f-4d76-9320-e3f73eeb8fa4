@@ -1,8 +1,7 @@
 {
-  "name": "educazy",
+  "name": "dotpay",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@github.com:vedant-11/educazy.git",
   "author": "agarwalviraj <viraj.ag007@gmail.com>",
   "license": "MIT",
   "scripts": {

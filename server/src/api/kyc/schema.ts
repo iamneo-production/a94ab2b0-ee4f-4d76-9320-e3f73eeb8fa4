@@ -11,11 +11,16 @@ const kycRegister = {
   name: yup.string().required(),
 };
 
+const documentSchema = {
+  number: yup.string(),
+  image_url: yup.string().url(),
+};
+
 const kycSchema = {
   uid: yup.string().length(10),
-  pan: yup.object(),
-  aadhar: yup.object(),
-  signature: yup.object(),
+  pan: yup.object().shape(documentSchema),
+  aadhar: yup.object().shape(documentSchema),
+  signature: yup.object().shape(documentSchema),
 };
 
 export const loginSchema = new yup.ObjectSchema(kycLogin);

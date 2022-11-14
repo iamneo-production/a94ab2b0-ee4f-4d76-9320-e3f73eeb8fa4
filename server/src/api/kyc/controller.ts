@@ -21,9 +21,14 @@ export const register = async (
     if (databaseResponse !== null)
       throw Error("Existing user with the same email");
 
+    const dpUser = await (await database())
+      .collection("users")
+      .findOne({ email: req.body.email });
+
     // Adding user
     const newUser: any = {
       ...req.body,
+      dp_id: dpUser?._id,
       pin: await hash(pin, 14),
     };
 
@@ -40,7 +45,7 @@ export const register = async (
 
 export const userLogin = async (
   email: string,
-  password: string,
+  pin: string,
   next: NextFunction,
   res: Response,
 ) => {
@@ -50,7 +55,7 @@ export const userLogin = async (
       .findOne({ email });
 
     if (databaseResponse === null) throw Error("User does not exist");
-    if (!(await compare(password, databaseResponse.password)))
+    if (!(await compare(pin, databaseResponse.pin)))
       throw Error("Invalid credentials");
     return await signJwt({ email, role: "admin" });
   } catch (error) {
@@ -71,6 +76,23 @@ export const update = async (
       .collection("kyc-users")
       .findOne({ email });
     if (oldData == null) throw new Error("User does not exist");
+    console.log(
+      oldData.dp_id,
+      oldData.pan?.number,
+      oldData.aadhar?.number,
+      oldData.signature,
+    );
+
+    if (
+      oldData.dp_id &&
+      (oldData.pan?.number || req.body.pan) &&
+      (oldData.aadhar?.number || req.body.aadhar) &&
+      (oldData.signature?.image_url || req.body.signature)
+    ) {
+      await (await database())
+        .collection("users")
+        .findOneAndUpdate({ _id: oldData.dp_id }, { $set: { kyc: true } });
+    }
     await (await database()).collection("kyc-users").updateOne(
       { email },
       {
