@@ -100,7 +100,7 @@ def match(img1, img2):
 
 def cheque(formUrl):
     endpoint = "https://wellsforgot123.cognitiveservices.azure.com/"
-    key = "aabd95c6b89a444e91b9af46dd82f27b"
+    key = "<API-KEY>"
     try:
         document_analysis_client = DocumentAnalysisClient(
                 endpoint=endpoint, credential=AzureKeyCredential(key)
