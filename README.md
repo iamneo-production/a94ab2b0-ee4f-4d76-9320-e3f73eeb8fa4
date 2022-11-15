@@ -40,6 +40,7 @@ As future generation bank customers (Gen Z) use more and more digital services a
   - Tensorflow
   - Uvicorn
   - Scikit-Image
+  - Azure
   > Web Dev
   - Amazon s3
   - Node js
