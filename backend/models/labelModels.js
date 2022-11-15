@@ -31,6 +31,11 @@ const labelSchema = new schema(
       required: false,
       default: [],
     },
+    visibility: {
+      type: Boolean,
+      required: false,
+      default: true,
+    },
   },
   { timestamps: true }
 );

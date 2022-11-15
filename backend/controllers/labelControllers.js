@@ -9,6 +9,7 @@ const createLabel = async (req, res) => {
     currentAmt,
     label_type,
     transaction_labels,
+    visiblity,
   } = req.body;
   try {
     const label = await Label.create({
@@ -18,7 +19,9 @@ const createLabel = async (req, res) => {
       currentAmt,
       label_type,
       transaction_labels,
+      visiblity,
     });
+
     res.status(200).json({ message: "successfully created label", label });
   } catch (error) {
     res.status(400).json({ error: error.message });
