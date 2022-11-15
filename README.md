@@ -24,33 +24,33 @@ The Neo Bank : <br>
 As future generation bank customers (Gen Z) use more and more digital services and products, it is important that banking should be available at their fingertips, and it should integrate well into their life.It is imperative that pure digital banks can tap into these customers well. However, it is important for these banks to provide all services that offline banks provide. This requires the neo banks to be more open to integrations with various merchants and other institutions to provide services and products seamlessly. These banks also should innovate constantly on par with the latest technology trends like metaverse; block chain etc., to be relevant for Gen Z. This will also benefit the banks to save cost.
 
 ## About our project 💥
-Our solution, "dot pay," is capable of replacing current banking systems and banks by automating and digitizing the complete pipeline. Our solution offers secure payment technologies like blockchain, a virtual cheque system, and data extraction of paper cheques using AI. We also track and provides detailed analytics that helps customers to help them make effective decisions; a custom label system within an account allows the user to track, categorize, and achievements of their small financial goal (short /long term), and the user can also categorize based on their monthly expenses categorized. Our AI also provides ideal financial planning according to their income, expenses, and saving patterns. We also have an alert system for each label that alerts users in case they make their financial goals. A conversational-based AI bot manages all of these financial, portfolio management, and recommendations. Our metaverse-based environments allow customers to interact with other customers, bank in a completely virtual world and encourage them in community-based investment. Our crawling system crawls different e-commerce websites and scraps all the offers from their personalized goals, which is available through our dot pay card.
+Our solution, "Dot Pay," is capable of replacing current banking systems and banks by automating and digitizing the complete pipeline. Our solution offers secure payment technologies like blockchain, a virtual cheque system, and data extraction of paper cheques using AI. We also track and provides detailed analytics that helps customers to help them make effective decisions; a custom label system within an account allows the user to track, categorize, and achievements of their small financial goal (short /long term), and the user can also categorize based on their monthly expenses categorized. Our AI also provides ideal financial planning according to their income, expenses, and saving patterns. We also have an alert system for each label that alerts users in case they make their financial goals. A conversational-based AI bot manages all of these financial, portfolio management, and recommendations. Our metaverse-based environments allow customers to interact with other customers, bank in a completely virtual world and encourage them in community-based investment. Our crawling system crawls different e-commerce websites and scraps all the offers from their personalized goals, which is available through our dot pay card.
 
 ## Features 🔧
- - blockchain-based payments
- - one-time KYC feature
- - virtual cheque sys
- - cheque scanner reader
- - loan defaulter prediction
- - conversational AI-based financial assistant 
- - portfolio planner 
- - community investment
+ - Blockchain-based payments
+ - One-time KYC feature
+ - Virtual cheque sys
+ - Cheque scanner reader
+ - Loan defaulter prediction
+ - Conversational AI-based financial assistant 
+ - Portfolio planner 
+ - Community investment
  - NFT payment through cards
- - investemnet in metaverse world 
- - two-way authentification sys 
- - money transfer
- - rewards and recommendations using AI - 
- - budget planning using AI
- - financial goal planning 
+ - Investemnet in metaverse world 
+ - Two-way authentification sys 
+ - Money transfer
+ - Rewards and recommendations using AI - 
+ - Budget planning using AI
+ - Financial goal planning 
 
 ## USPs 🚨
-- automated digitized complete pipeline of the banking system
-- ai based personal financial system 
-- invetement in metaverse world
-- secured payments using blockchain 
-- portfolio planning and management 
-- rewards and recommendations using SI
-- loan defaulter prediction 
+- Automated digitized complete pipeline of the banking system
+- Ai based personal financial system 
+- Invetement in metaverse world
+- Secured payments using blockchain 
+- Portfolio planning and management 
+- Rewards and recommendations using SI
+- Loan defaulter prediction 
  
 ## Screenshots 🖼️
 
@@ -62,7 +62,7 @@ Our solution, "dot pay," is capable of replacing current banking systems and ban
   - Polygon
   - Azure 
   - Playfab
-    > App
+   > App
   - flutter
   - dart
   > AI/ML
