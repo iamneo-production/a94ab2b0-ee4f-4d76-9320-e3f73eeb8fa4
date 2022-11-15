@@ -53,6 +53,12 @@ Our solution, "Dot Pay" is capable of replacing current banking systems and bank
 - Loan defaulter prediction 
  
 ## Screenshots 🖼️
+![WhatsApp Image 2022-11-15 at 22 17 15](https://user-images.githubusercontent.com/53876196/201994164-681c8af3-3cbc-4fbe-9c79-02f1a065be58.jpeg)
+![WhatsApp Image 2022-11-15 at 23 10 59](https://user-images.githubusercontent.com/53876196/201994177-8807c8a7-5ab8-47e4-ae85-2abbe8a8f256.jpeg)
+![WhatsApp Image 2022-11-15 at 23 08 29](https://user-images.githubusercontent.com/53876196/201994187-036c9449-8641-422a-9f7c-5a30f080f3d4.jpeg)
+![WhatsApp Image 2022-11-15 at 23 08 16](https://user-images.githubusercontent.com/53876196/201994201-292dcba7-50f3-4b24-b39b-cf866cfd51cd.jpeg)
+![WhatsApp Image 2022-11-15 at 23 05 25](https://user-images.githubusercontent.com/53876196/201994209-0f91d617-4094-4cdb-b441-de8f83fe4ea7.jpeg)
+
 
 ## Technology Stack 💻
   > Metaverse
