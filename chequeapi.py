@@ -17,6 +17,7 @@ from azure.core.credentials import AzureKeyCredential
 from azure.ai.formrecognizer import DocumentAnalysisClient
 import re
 import json
+from word2number import w2n
 
 
 app = FastAPI()
@@ -84,7 +85,7 @@ def removeWhiteSpace(img):
     x, y, w, h = cv2.boundingRect(coords)
     rect = img[y:y+h, x:x+w]
     return rect
-    
+ 
 def match(img1, img2):
     img1 = removeWhiteSpace(img1)
     img2 = removeWhiteSpace(img2)
@@ -112,15 +113,60 @@ def cheque(formUrl):
         ref = cv2.imread('micr.png')
         micr_code = micr(cimage,ref)
         print(micr_code)
-        micr_str = "\nMICR :"
+        micr_str = ""
         for code in micr_code:
             micr_str+=code
         out = result.to_dict()['content']
+        print(out)
         x = re.findall('[0-9]+', out)
         x = sorted(x, key=len)
         idx = out.find(x[-1])
         fin_out = out[0:idx+len(x[-1])]
-        return fin_out + micr_str
+        try:
+            ifsidx = out.lower().find("pay")
+            ifsc_patt = out[0:ifsidx]
+            ifs_match = re.search('([A-Za-z0]{4})(0\d{6})$', ifsc_patt)
+            ifsc_code = ifs_match.group(0)
+            print(ifsc_code)
+            bnk = out.lower().find("bank")
+            pcode = re.findall(r'(\d{6})', out)
+            output = {"Bank":out[0:bnk+4],"Account No":x[-1],"Pincode":pcode[0], "MICR Code":micr_str,"IFSC Code":ifsc_code,"Name":out[ifsidx+3:ifsidx+20].replace('\n','')}
+        except:
+            pass
+        try:
+            URL = "https://ifsc.razorpay.com/"
+            
+            data = requests.get(URL+ifsc_code).json()
+            
+            data["MICR Code"] = micr_str
+            data["Account No"] = x[-1]
+            data["Name"] = out[ifsidx+3:ifsidx+20].replace('\n','')
+        except:
+            return output
+
+        try:
+            ruidx = out.find('₹')
+            print(ruidx)
+            newr = out[ruidx:ruidx+12]
+            newrr = newr.find('\n')
+            print("newr")
+            print(newr)
+            xx = re.findall('[0-9]+', newr)
+            print("X")
+            print(xx)
+            amttt=""
+            for a in xx:
+                amttt +=a
+            data["Amount"]=amttt
+            return data
+        except:
+            try:
+                amt =  w2n.word_to_num(out)
+                data["Amount"] = amt
+                return data
+            except:
+                return output
+
     except:
         return "Error in Uploaded Image"
 
