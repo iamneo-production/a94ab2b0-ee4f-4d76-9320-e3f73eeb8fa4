@@ -88,10 +88,12 @@ const uploadHandler = async (
   next: NextFunction,
 ) => {
   try {
-    let url = req.file.location;
-    url = url.split("/");
-    url[2] = url[2].split(".").slice(1).join(".");
-    url = url.join("/");
+    console.log(req.file.location);
+
+    let url = req.file?.location;
+    url = url?.split("/");
+    url[2] = url[2]?.split(".")?.slice(1)?.join(".");
+    url = url?.join("/");
 
     res.json({ success: true, data: url });
   } catch (error) {

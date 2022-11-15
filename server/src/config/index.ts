@@ -1,6 +1,7 @@
 require("dotenv").config();
 
 process.env.NODE_ENV = process.env.NODE_ENV || "development";
+console.log(process.env.ACCESSKEY_ID, process.env.SECRETACCESSKEY);
 
 export default {
   port: process.env.PORT ? parseInt(process.env.PORT) : 8080,
@@ -12,4 +13,6 @@ export default {
   api: {
     prefix: "/api",
   },
+  accessKeyId: process.env.ACCESSKEY_ID as string,
+  secretAccessKey: process.env.SECRETACCESSKEY as string,
 };
