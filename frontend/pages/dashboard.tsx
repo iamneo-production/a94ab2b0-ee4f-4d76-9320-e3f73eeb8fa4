@@ -29,23 +29,26 @@ const Dashboard: FC = () => {
   };
 
   return (
-    <div className="ml-[15%]">
+    <div className=" lg:ml-[20%] mx-[2%] md:ml-[20%]">
       <h1 className=" mx-[2%] py-8">Welcome,</h1>
-      <div className="flex mx-[2%] gap-[2%] flex-row h-full ">
+      <div className="flex mx-[2%] gap-[2%] md:flex-row lg:flex-row flex-col h-full ">
         <Card />
         <Labels text={labelData} labelName={labelName} />
       </div>
 
-      <div className=" mx-[2%] my-[4%] flex flex-row gap-4">
+      <div className=" overflow-x-scroll ml-[2%] my-[4%] flex flex-row gap-4">
         {labelData.map((data) => {
           return (
-            <button
-              onClick={setLabelName.bind(null, data.label_name)}
-              className=" rounded-lg border-2 border-blue-700 min-w-[10%] border"
-              key={data}
-            >
-              {data?.label_name}
-            </button>
+            <>
+              {" "}
+              <button
+                onClick={setLabelName.bind(null, data.label_name)}
+                className=" rounded-lg border-2 border-blue-700 w-40 "
+                key={data}
+              >
+                {data?.label_name}
+              </button>
+            </>
           );
         })}
         <span className="w-0.5 h-10 bg-gray-300 "></span>

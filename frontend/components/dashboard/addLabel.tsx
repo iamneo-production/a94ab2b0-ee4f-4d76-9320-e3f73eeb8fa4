@@ -24,16 +24,17 @@ const AddLabel = () => {
 
   const baseURL = "https://tokenbalance-production.up.railway.app/api/labels/";
 
-  //axios post request
+  // axios post request to add a new label using try catch
 
   const addLabel = async () => {
-    const result = await axios.post(baseURL, {
+    const response = await axios.post(baseURL, {
+      _acctn: "4567889039",
       label_name: labelName,
-      label_amt: labelAmt,
-      current_amt: currentAmt,
+      labelAmt: labelAmt,
+      currentAmt: currentAmt,
       label_type: label_type,
     });
-    console.log(result);
+    console.log(response);
   };
 
   const initialRef = React.useRef(null);
@@ -57,28 +58,24 @@ const AddLabel = () => {
             <FormControl>
               <FormLabel>Label Name</FormLabel>
               <Input
-                ref={initialRef}
                 value={labelName}
                 onChange={(e) => setLabelName(e.target.value)}
-                placeholder="First name"
+                placeholder="Label name"
               />
               <FormLabel>Label type</FormLabel>
               <Input
-                ref={initialRef}
                 value={label_type}
                 onChange={(e) => setLabel_type(e.target.value)}
                 placeholder="Debit or Savings or Goal"
               />
               <FormLabel>Current Amount</FormLabel>
               <Input
-                ref={initialRef}
                 value={currentAmt}
                 onChange={(e) => setCurrentAmt(e.target.value)}
                 placeholder="Debit or Savings or Goal"
               />
               <FormLabel>Limit</FormLabel>
               <Input
-                ref={initialRef}
                 value={labelAmt}
                 onChange={(e) => setLabelAmt(e.target.value)}
                 placeholder="Debit or Savings or Goal"
@@ -87,7 +84,13 @@ const AddLabel = () => {
           </ModalBody>
 
           <ModalFooter>
-            <Button onSubmit={addLabel()} colorScheme="blue" mr={3}>
+            <Button
+              onClick={() => {
+                addLabel();
+              }}
+              colorScheme="blue"
+              mr={3}
+            >
               Save
             </Button>
             <Button onClick={onClose}>Cancel</Button>

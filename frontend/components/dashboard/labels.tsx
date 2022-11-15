@@ -1,5 +1,6 @@
 import React, { FC, useEffect, useState, useContext } from "react";
 import axios from "axios";
+import SideBarTwo from "../shared/nav/sideBarTwo";
 
 interface Text {
   text: Array<string>;
@@ -79,6 +80,7 @@ const Labels: FC<Text> = (props): JSX.Element => {
             );
           }
         })}
+        <SideBarTwo />
       </div>
     </div>
   );

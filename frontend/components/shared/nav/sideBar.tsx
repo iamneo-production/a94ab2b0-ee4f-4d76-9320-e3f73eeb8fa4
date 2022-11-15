@@ -17,7 +17,7 @@ const SideBar: FC = () => {
   ];
 
   return (
-    <div className="w-[15%]   h-screen fixed bg-gradient-to-b from-[#303A91] to-[#48207A]">
+    <div className="lg:w-[17%] hidden lg:block md:block    lg:h-screen lg:fixed lg:bg-gradient-to-b lg:from-[#303A91] lg:to-[#48207A] md:w-[17%]     md:h-screen md:fixed md:bg-gradient-to-b from-[#303A91] to-[#48207A]">
       <div className=" mx-[10%] my-6 max-w-[40%]">
         <Link href="/dashboard">
           <Image src={logo} alt="" layout="responsive" />
