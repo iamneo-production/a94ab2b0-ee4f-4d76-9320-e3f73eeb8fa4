@@ -24,7 +24,10 @@ The Neo Bank : <br>
 As future generation bank customers (Gen Z) use more and more digital services and products, it is important that banking should be available at their fingertips, and it should integrate well into their life.It is imperative that pure digital banks can tap into these customers well. However, it is important for these banks to provide all services that offline banks provide. This requires the neo banks to be more open to integrations with various merchants and other institutions to provide services and products seamlessly. These banks also should innovate constantly on par with the latest technology trends like metaverse; block chain etc., to be relevant for Gen Z. This will also benefit the banks to save cost.
 
 
-
+## About Our project 🔧
+## PLAN OF ACTION 🚨
+### Screenshots 🖼️
+## Technology Stack 💻
 
 
 
