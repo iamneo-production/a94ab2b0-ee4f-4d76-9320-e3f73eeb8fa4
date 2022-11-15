@@ -58,10 +58,8 @@ Our solution, "Dot Pay" is capable of replacing current banking systems and bank
 ![WhatsApp Image 2022-11-15 at 23 08 29](https://user-images.githubusercontent.com/53876196/201994187-036c9449-8641-422a-9f7c-5a30f080f3d4.jpeg)
 ![WhatsApp Image 2022-11-15 at 23 08 16](https://user-images.githubusercontent.com/53876196/201994201-292dcba7-50f3-4b24-b39b-cf866cfd51cd.jpeg)
 ![WhatsApp Image 2022-11-15 at 23 05 25](https://user-images.githubusercontent.com/53876196/201994209-0f91d617-4094-4cdb-b441-de8f83fe4ea7.jpeg)
-![1](https://user-images.githubusercontent.com/53876196/201996903-1df82d6e-0fe2-4bf9-a826-aad731b63e2b.png)
-![2](https://user-images.githubusercontent.com/53876196/201996914-54818f5c-2d7c-4675-b990-8f7e63ab4882.png)
-![3](https://user-images.githubusercontent.com/53876196/201996924-df3b0691-5bb6-4782-96e7-7598b8dcc0ad.png)
-![4](https://user-images.githubusercontent.com/53876196/201996954-4589184c-9d5e-4a8b-97c4-ae5a95e87102.png)
+![Untitled-1](https://user-images.githubusercontent.com/75165587/201997659-ed0b1d91-d4cc-4179-9dc1-20909a9771d1.jpg)
+
 
 
 
