@@ -2,30 +2,131 @@ version: "2.0"
 
 stories:
 
-- story: happy path
+# - story: happy path
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - action: action_hello_world
+#   - intent: mood_great
+#   - action: utter_happy
+
+# - story: sad path 1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+# #   - action: utter_did_that_help
+# #   - intent: affirm
+# #   - action: utter_happy
+
+# # - story: sad path 2
+# #   steps:
+# #   - intent: greet
+# #   - action: utter_greet
+# #   - intent: mood_unhappy
+# #   - action: utter_cheer_up
+# #   - action: utter_did_that_help
+# #   - intent: deny
+# #   - action: utter_goodbye
+
+- story: check_bal
   steps:
   - intent: greet
   - action: utter_greet
+  - action: utter_check_balance
+  - intent: enter_acc
   - action: action_hello_world
-  - intent: mood_great
-  - action: utter_happy
-
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
+  - action: utter_greetconfirm
+  - intent: check_balance
+  - action: accountbalance
+  - intent: goodbye
   - action: utter_goodbye
+
+- story: check_labels
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_check_balance
+  - intent: enter_acc
+  - action: action_hello_world
+  - action: utter_greetconfirm
+  - intent: list_labels
+  - action: listfinancialgoal
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: create_label
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_check_balance
+  - intent: enter_acc
+  - action: action_hello_world
+  - action: utter_greetconfirm
+  - intent: financial_goal
+  - action: utter_label_confirmation
+  - action: financialgoal
+  - intent: affirm
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: create_temp_label
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_check_balance
+  - intent: enter_acc
+  - action: action_hello_world
+  - action: utter_greetconfirm
+  - intent: financial_goal
+  - action: utter_label_confirmation
+  - action: financialgoal
+  - intent: deny
+  - action: utter_labeldeny
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+- story: portfolio
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_check_balance
+  - intent: enter_acc
+  - action: action_hello_world
+  - action: utter_greetconfirm
+  - intent: portfolio
+  - action: utter_salary
+  - intent: salary
+  - action: actionsalary
+  - action: utter_basic
+  - intent: basic
+  - action: actionbasic
+  - action: utter_extra
+  - intent: personal
+  - action: actionextra
+  - action: actionportfolio
+  - intent: goodbye
+  - action: utter_goodbye
+
+  
+# - story: mix
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - action: action_hello_world
+#   - intent: check_balance
+#   - action: utter_check_balance
+#   - intent: enter_acc
+#   - action: accountbalance
+#   - intent: list_labels
+#   - action: utter_check_balance
+#   - intent: enter_acc
+#   - action: listfinancialgoal
+#   - intent: financial_goal
+#   - action: utter_check_balance
+#   - intent: enter_acc
+#   - action: financialgoal
+#   - intent: goodbye
+#   - action: utter_goodbye

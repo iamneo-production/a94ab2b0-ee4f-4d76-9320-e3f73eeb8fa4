@@ -16,6 +16,7 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
+    - start
 
 - intent: goodbye
   examples: |
@@ -30,6 +31,26 @@ nlu:
     - see you around
     - bye bye
     - see you later
+    - Bye
+    - Bye bye
+    - good bye
+    - good bye rasa bot!
+    - good night
+    - goodbye
+    - goodbye.
+    - goodnight
+    - gotta go
+    - k byyye #slay
+    - ok Bye
+    - ok bye
+    - ok, bye
+    - ok.bye
+    - see u later
+    - thank you
+    - thank you so much
+    - thanks
+    - thanks a lot
+    - i appreciate
 
 - intent: affirm
   examples: |
@@ -39,6 +60,7 @@ nlu:
     - of course
     - that sounds good
     - correct
+    - sure
 
 - intent: deny
   examples: |
@@ -90,3 +112,82 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: check_balance
+  examples: |
+    - I want to know my balance
+    - show me account balance
+    - sccount balance
+    - balance
+    - check balance
+    - show me my leftover balance
+    - could you help me to check my balance
+    - how much is in my account
+    - how much money
+    
+- intent: enter_acc
+  examples: |
+    - my account no is [12345]{"entity": "accno"}
+    - [123]{"entity": "accno"}
+    - account no is [56]{"entity": "accno"}
+    - my account id is [98]{"entity": "accno"}
+    - [88]{"entity": "accno"} is my account no
+
+- intent: financial_goal
+  examples: |
+    - I want to purchase apple iphone 12
+    - i want to buy 2bhk house
+    - i want to buy gold
+    - i want to save for education
+    - i want to invest for medical
+
+- intent: list_labels
+  examples: |
+    - list out all the labels
+    - list out all the financial goals
+    - show me mine financial goals
+    - financial goals please
+    - can you show me in displaying my financial goals
+    - help me out in finging m goals
+    - check labels
+
+
+- intent: portfolio
+  examples: |
+    - create portfolio for me
+    - create financial portfolio for me
+    - fiancial portfolio
+    - financial portfolio
+    - show me my portfolio
+    - show me my finanicial portfolio
+    - help me in creating my portfolio
+
+- intent: salary
+  examples: |
+    - my salary is 50000
+    - my sal is 80000
+    - my monthly salary is 40000
+    - my income is 85000
+    - my monthly income is 92000
+    - my monthly earnings are 60000
+    - earning is 70000
+
+- intent: basic
+  examples: |
+    - my expenses are 50000
+    - my exp is 80000
+    - my monthly expense is 40000
+    - my expenses is 85000
+    - my monthly expense is 92000
+    - my monthly expenses are 60000
+    - expense is 70000
+
+- intent: personal
+  examples: |
+    - my personal expenses are 50000
+    - my personal exp is 80000
+    - my monthly extras are 40000
+    - my personal expenses is 85000
+    - my monthly extra expense is 92000
+    - my monthly extra expenses are 60000
+    - personal expense is 70000

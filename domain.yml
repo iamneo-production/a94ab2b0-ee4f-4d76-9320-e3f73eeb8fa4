@@ -8,10 +8,18 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - check_balance
+  - enter_acc
+  - financial_goal
+  - list_labels
+  - portfolio
+  - salary
+  - basic
+  - personal
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "Hey! I am your Personal Financial AI Assitant."
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -29,8 +37,59 @@ responses:
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 
+  utter_check_balance:
+  - text: "Before we get started, please enter your account no:"
+
+  utter_greetconfirm:
+  - text: "Thanks for confirming!, How may I help you today?"
+
+  utter_balance:
+  - text: "Your balance is {bal}"
+
+  utter_label_confirmation:
+  - text: "Do you want me to create a goal for that?"
+
+  utter_listlabel:
+  - text: "Goal : {goal},\n Target Amount: {tg},\n Current Amount: {ca}"
+
+  utter_labeldeny:
+  - text: "Okay, No worries! Please let me know if you need any assistance regarding this, I am here for you. :)"
+
+  utter_salary:
+  - text: "It seems you are a new customer. To create a personal financial portfolio help me by providing few details. Please enter your average monthly earnings/salary/icnome"
+
+  utter_basic:
+  - text: "How much is your average monthly expenses?(Mandatory Expenses - Food/Accomadation/EMIs/Rent etc.)"
+
+  utter_extra:
+  - text: "How much is your average monthly personal expenses?(Occassional Expenses - Gadgets/Trip/Restaurant/Shopping etc.)"
+
+  utter_idealfund:
+  - text: "It seems that you don't have emergency fund in your account. If you have emergeny fund in different forms you can proceed with other ivestments. Your account balance is {bal} & your ideal emergency fund amount should be {ib}."
+
+  utter_idealratio:
+  - text: "Your avergae monthly expenses should be around Rs.{ideal_basic}, average personal expenses should be around Rs.{ideal_extra} and savins should be around Rs.{ideal_savings}."
+
+
+
+
+
+
+
 actions:
 - action_hello_world
+- accountbalance
+- financialgoal
+- listfinancialgoal
+- actionsalary
+- actionbasic
+- actionextra
+- actionportfolio
+
+
+entities:
+- accno
+
 
 session_config:
   session_expiration_time: 60
