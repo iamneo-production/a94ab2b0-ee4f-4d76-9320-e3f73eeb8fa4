@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-7xl;
+    @apply font-sans;
+    @apply font-medium;
+  }
+  hr {
+    @apply h-[5px];
+    @apply bg-gradient-to-r from-[#387AA9] to-[#278F82];
+    @apply rounded;
+    @apply w-[30%];
+  }
+  /* ... */
+}
