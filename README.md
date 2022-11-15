@@ -43,7 +43,7 @@ Our solution, "dot pay," is capable of replacing current banking systems and ban
  - budget planning using AI
  - financial goal planning 
 
-## USB 🚨
+## USPs 🚨
 - automated digitized complete pipeline of the banking system
 - ai based personal financial system 
 - invetement in metaverse world
