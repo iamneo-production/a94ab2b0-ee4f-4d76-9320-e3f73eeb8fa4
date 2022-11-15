@@ -122,7 +122,7 @@ class ActionPortfolio(Action):
         FV = A * ((((1 + MR)**(M))-1) * (1 + MR))/MR
         FV = round(FV)
         print("The expected amount you will get is:",FV)
-        dispatcher.utter_message(text="If you wish to start SIP of 50% of your monthly savings i.e., Rs.{A} in our Mututal Fund SIP Plan, considering annual return of 12% from past years(Varies), by the end of 25 years you will have Rs.{FV}".format(A=A,FV=FV))
+        dispatcher.utter_message(text="If you wish to start SIP of 50% of your monthly savings i.e., Rs.{A} in our Mututal Fund SIP Plan, considering annual return of 12% from past years(varies), by the end of 25 years you will have Rs.{FV}".format(A=A,FV=FV))
         dispatcher.utter_message(text = "Rest of the savings amount can be used for acheiving your small financial goals.")
         if invbal<ideal_savings:
             dispatcher.utter_message(text="Your Income to Expense and Savings ratio is not good.")
@@ -149,8 +149,6 @@ class ActionHelloWorld(Action):
         account_id =  account_id[0]["value"]     
         print(account_id)  
 
-        dispatcher.utter_message(text="Hello Message from Action Server")
-
         return []
 
 class AccountBalance(Action):
@@ -176,6 +174,45 @@ class AccountBalance(Action):
 
         return []
 
+class TempFinancialGoal(Action):
+    
+    def name(self) -> Text:
+        return "tempfinancialgoal"
+
+    async def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        user_input = tracker.latest_message.get('text')
+        print(user_input)
+        sent = nltk.word_tokenize(user_input)
+        sent = nltk.pos_tag(sent)
+        tok_list = []
+        for se in sent:
+            if se[1]=='NN' or se[1]=='NNP':
+                tok_list.append(se[0])
+
+        print(tok_list)
+        goal=""
+        if(len(tok_list)==0):
+            up = user_input.split(' ')
+            goal = up[-1]
+        else:
+            for tok in tok_list:
+                goal = goal + "_" + tok 
+            goal = goal[1:]
+        print(goal)                                                       
+        base_url = "https://tokenbalance-production.up.railway.app/api/labels/"
+        body_data = {"_acctn":account_id,"label_name":goal,"labelAmt": 0,"currentAmt":0,"label_type": "goal","transaction_labels":[],"visibility":0}
+        print(body_data)
+        try:
+            r = requests.post(url = base_url,json=body_data)
+            print(r)
+        except:
+            dispatcher.utter_message(f"This account id doesn't exist")
+
+        return []
+
 class FinancialGoal(Action):
     
     def name(self) -> Text:
@@ -196,17 +233,24 @@ class FinancialGoal(Action):
 
         print(tok_list)
         goal=""
-        for tok in tok_list:
-            goal = goal + "_" + tok 
-        goal = goal[1:]
+        if(len(tok_list)==0):
+            up = user_input.split(' ')
+            goal = up[-1]
+        else:
+            for tok in tok_list:
+                goal = goal + "_" + tok 
+            goal = goal[1:]
         print(goal)                                                       
         base_url = "https://tokenbalance-production.up.railway.app/api/labels/"
-        body_data = {"_acctn":account_id,"label_name":goal,"labelAmt": 80000,"currentAmt":0,"label_type": "goal","transaction_labels":[]}
+        body_data = {"_acctn":account_id,"label_name":goal,"labelAmt": 0,"currentAmt":0,"label_type": "goal","transaction_labels":[],"visibility":1}
         print(body_data)
         try:
             r = requests.post(url = base_url,json=body_data)
             print(r)
-            dispatcher.utter_message("Financial goal created")
+            if r.status_code ==200:
+                dispatcher.utter_message("Financial goal created")
+            else:
+                dispatcher.utter_message("There is some error in the data you have provided :(")
         except:
             dispatcher.utter_message(f"This account id doesn't exist")
 

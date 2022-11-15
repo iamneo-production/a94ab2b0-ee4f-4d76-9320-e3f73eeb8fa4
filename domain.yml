@@ -7,7 +7,6 @@ intents:
   - deny
   - mood_great
   - mood_unhappy
-  - bot_challenge
   - check_balance
   - enter_acc
   - financial_goal
@@ -19,11 +18,7 @@ intents:
 
 responses:
   utter_greet:
-  - text: "Hey! I am your Personal Financial AI Assitant."
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  - text: "Hey! I am your Personal Financial AI Assistant."
 
   utter_did_that_help:
   - text: "Did that help you?"
@@ -34,8 +29,9 @@ responses:
   utter_goodbye:
   - text: "Bye"
 
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
 
   utter_check_balance:
   - text: "Before we get started, please enter your account no:"
@@ -45,6 +41,9 @@ responses:
 
   utter_balance:
   - text: "Your balance is {bal}"
+
+  utter_default:
+  - text: Sorry I didn't get that. Can you rephrase?
 
   utter_label_confirmation:
   - text: "Do you want me to create a goal for that?"
@@ -56,7 +55,7 @@ responses:
   - text: "Okay, No worries! Please let me know if you need any assistance regarding this, I am here for you. :)"
 
   utter_salary:
-  - text: "It seems you are a new customer. To create a personal financial portfolio help me by providing few details. Please enter your average monthly earnings/salary/icnome"
+  - text: "It seems you are a new customer. To create a personal financial portfolio help me by providing few details.\n Please enter your average monthly earnings/salary/income\n(Example: my salary is 70000)"
 
   utter_basic:
   - text: "How much is your average monthly expenses?(Mandatory Expenses - Food/Accomadation/EMIs/Rent etc.)"
@@ -85,6 +84,7 @@ actions:
 - actionbasic
 - actionextra
 - actionportfolio
+- tempfinancialgoal
 
 
 entities:
