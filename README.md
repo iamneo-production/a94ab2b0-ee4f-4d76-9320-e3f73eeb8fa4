@@ -39,7 +39,7 @@ Our solution, "Dot Pay" is capable of replacing current banking systems and bank
  - Investemnet in metaverse world 
  - Two-way authentification sys 
  - Money transfer
- - Rewards and recommendations using AI - 
+ - Rewards and recommendations using AI 
  - Budget planning using AI
  - Financial goal planning 
 
@@ -49,7 +49,7 @@ Our solution, "Dot Pay" is capable of replacing current banking systems and bank
 - Invetement in metaverse world
 - Secured payments using blockchain 
 - Portfolio planning and management 
-- Rewards and recommendations using SI
+- Rewards and recommendations using AI
 - Loan defaulter prediction 
  
 ## Screenshots 🖼️
