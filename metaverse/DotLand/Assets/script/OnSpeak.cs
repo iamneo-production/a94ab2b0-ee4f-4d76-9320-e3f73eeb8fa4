@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class OnSpeak : MonoBehaviour
 {
-    public Animator animator;
+    private Animator animator;
     // Start is called before the first frame update
     void Start()
     {
