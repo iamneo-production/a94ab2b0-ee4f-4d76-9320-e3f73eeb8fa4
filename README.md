@@ -28,6 +28,13 @@ As future generation bank customers (Gen Z) use more and more digital services a
 ## Screenshots 🖼️
 
 ## Technology Stack 💻
+  -> Metaverse
+  - Unity
+  - Hardhat
+  - Chainsafe
+  - Polygon
+  - Azure 
+  - Playfab
   > App
   - flutter
   - dart
