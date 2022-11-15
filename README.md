@@ -99,7 +99,7 @@ Our solution, "Dot Pay" is capable of replacing current banking systems and bank
 Only developers.
 | Name      | GitHub Profile     |
 | :------------- | :----------: |
-|  Vedant Singh (Team Lead) | [GitHub](https://github.com/vedant-11) |
+|  Vedant Singh  | [GitHub](https://github.com/vedant-11) |
 |  Rajendra Sarpal  | [GitHub](https://github.com/Rajendra465) |
 |  Chetas Shree M| [GitHub]( https://github.com/ChetasShree) |
 |  Viraj Agarwal  | [GitHub](https://github.com/agarwalviraj) |
