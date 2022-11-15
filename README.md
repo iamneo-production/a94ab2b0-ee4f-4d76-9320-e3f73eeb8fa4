@@ -22,3 +22,19 @@ Official Entry of Rubix tam to Academic Grand Challenge <br>
 ## Problem Statement 🚧
 The Neo Bank : <br>
 As future generation bank customers (Gen Z) use more and more digital services and products, it is important that banking should be available at their fingertips, and it should integrate well into their life.It is imperative that pure digital banks can tap into these customers well. However, it is important for these banks to provide all services that offline banks provide. This requires the neo banks to be more open to integrations with various merchants and other institutions to provide services and products seamlessly. These banks also should innovate constantly on par with the latest technology trends like metaverse; block chain etc., to be relevant for Gen Z. This will also benefit the banks to save cost.
+
+
+
+
+
+
+## Collaborators 🤖
+
+Only developers.
+| Name      | GitHub Profile     |
+| :------------- | :----------: |
+|  Vedant Singh (Team Lead) | [GitHub](https://github.com/vedant-11) |
+|  Rajendra Sarpal  | [GitHub](https://github.com/Rajendra465) |
+|  Chetas Shree M| [GitHub]( https://github.com/ChetasShree) |
+|  Viraj Agarwal  | [GitHub](https://github.com/agarwalviraj) |
+|  Kartikey Mahawar | [GitHub](https://github.com/kartikey321) |
