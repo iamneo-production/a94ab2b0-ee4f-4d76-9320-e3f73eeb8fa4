@@ -1,0 +1,467 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.dotpay"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="31" />
+10    <!--
+11         The INTERNET permission is required for development. Specifically,
+12         the Flutter tool needs it to communicate with the running application
+13         to allow setting breakpoints, to provide hot reload, etc.
+14    -->
+15    <uses-permission android:name="android.permission.INTERNET" />
+15-->/home/kartikey/Documents/flutter_projects/dotpay-nasscom/android/app/src/debug/AndroidManifest.xml:7:5-66
+15-->/home/kartikey/Documents/flutter_projects/dotpay-nasscom/android/app/src/debug/AndroidManifest.xml:7:22-64
+16    <!-- See https://developer.android.com/training/package-visibility/declaring for more details. -->
+17    <queries>
+17-->[com.stripe:financial-connections:20.12.0] /home/kartikey/.gradle/caches/transforms-3/47313b37266ecb09bc77180329857c67/transformed/jetified-financial-connections-20.12.0/AndroidManifest.xml:12:5-20:15
+18
+19        <!-- Added to check the default browser that will host the AuthFlow. -->
+20        <intent>
+20-->[com.stripe:financial-connections:20.12.0] /home/kartikey/.gradle/caches/transforms-3/47313b37266ecb09bc77180329857c67/transformed/jetified-financial-connections-20.12.0/AndroidManifest.xml:15:9-19:18
+21            <action android:name="android.intent.action.VIEW" />
+21-->[com.stripe:financial-connections:20.12.0] /home/kartikey/.gradle/caches/transforms-3/47313b37266ecb09bc77180329857c67/transformed/jetified-financial-connections-20.12.0/AndroidManifest.xml:16:13-65
+21-->[com.stripe:financial-connections:20.12.0] /home/kartikey/.gradle/caches/transforms-3/47313b37266ecb09bc77180329857c67/transformed/jetified-financial-connections-20.12.0/AndroidManifest.xml:16:21-62
+22
+23            <data android:scheme="http" />
+23-->[com.stripe:financial-connections:20.12.0] /home/kartikey/.gradle/caches/transforms-3/47313b37266ecb09bc77180329857c67/transformed/jetified-financial-connections-20.12.0/AndroidManifest.xml:18:13-43
+23-->[com.stripe:financial-connections:20.12.0] /home/kartikey/.gradle/caches/transforms-3/47313b37266ecb09bc77180329857c67/transformed/jetified-financial-connections-20.12.0/AndroidManifest.xml:18:19-40
+24        </intent>
+25        <!-- Added to check if Chrome is installed for browser-based payment authentication (e.g. 3DS1). -->
+26        <package android:name="com.android.chrome" /> <!-- Needs to be explicitly declared on Android R+ -->
+26-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:13:9-54
+26-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:13:18-51
+27        <package android:name="com.google.android.apps.maps" />
+27-->[com.google.android.gms:play-services-maps:18.0.2] /home/kartikey/.gradle/caches/transforms-3/42e8e193afdde6a89d257fba9624cf99/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:33:9-64
+27-->[com.google.android.gms:play-services-maps:18.0.2] /home/kartikey/.gradle/caches/transforms-3/42e8e193afdde6a89d257fba9624cf99/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:33:18-61
+28    </queries> <!-- Include required permissions for Google Maps API to run. -->
+29    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+29-->[com.google.android.gms:play-services-maps:18.0.2] /home/kartikey/.gradle/caches/transforms-3/42e8e193afdde6a89d257fba9624cf99/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:23:5-79
+29-->[com.google.android.gms:play-services-maps:18.0.2] /home/kartikey/.gradle/caches/transforms-3/42e8e193afdde6a89d257fba9624cf99/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:23:22-76
+30
+31    <uses-feature
+31-->[com.google.android.gms:play-services-maps:18.0.2] /home/kartikey/.gradle/caches/transforms-3/42e8e193afdde6a89d257fba9624cf99/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:26:5-28:35
+32        android:glEsVersion="0x00020000"
+32-->[com.google.android.gms:play-services-maps:18.0.2] /home/kartikey/.gradle/caches/transforms-3/42e8e193afdde6a89d257fba9624cf99/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:27:9-41
+33        android:required="true" />
+33-->[com.google.android.gms:play-services-maps:18.0.2] /home/kartikey/.gradle/caches/transforms-3/42e8e193afdde6a89d257fba9624cf99/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:28:9-32
+34
+35    <permission
+35-->[androidx.core:core:1.9.0] /home/kartikey/.gradle/caches/transforms-3/6710ee2e3546b398da00e75003abfc33/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+36        android:name="com.example.dotpay.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+36-->[androidx.core:core:1.9.0] /home/kartikey/.gradle/caches/transforms-3/6710ee2e3546b398da00e75003abfc33/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+37        android:protectionLevel="signature" />
+37-->[androidx.core:core:1.9.0] /home/kartikey/.gradle/caches/transforms-3/6710ee2e3546b398da00e75003abfc33/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+38
+39    <uses-permission android:name="com.example.dotpay.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+39-->[androidx.core:core:1.9.0] /home/kartikey/.gradle/caches/transforms-3/6710ee2e3546b398da00e75003abfc33/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+39-->[androidx.core:core:1.9.0] /home/kartikey/.gradle/caches/transforms-3/6710ee2e3546b398da00e75003abfc33/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+40
+41    <application
+42        android:name="android.app.Application"
+43        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+43-->[androidx.core:core:1.9.0] /home/kartikey/.gradle/caches/transforms-3/6710ee2e3546b398da00e75003abfc33/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+44        android:debuggable="true"
+45        android:icon="@mipmap/ic_launcher"
+46        android:label="dotpay" >
+47        <activity
+48            android:name="com.example.dotpay.MainActivity"
+49            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+50            android:exported="true"
+51            android:hardwareAccelerated="true"
+52            android:launchMode="singleTop"
+53            android:theme="@style/LaunchTheme"
+54            android:windowSoftInputMode="adjustResize" >
+55
+56            <!--
+57                 Specifies an Android theme to apply to this Activity as soon as
+58                 the Android process has started. This theme is visible to the user
+59                 while the Flutter UI initializes. After that, this theme continues
+60                 to determine the Window background behind the Flutter UI.
+61            -->
+62            <meta-data
+63                android:name="io.flutter.embedding.android.NormalTheme"
+64                android:resource="@style/NormalTheme" />
+65
+66            <intent-filter>
+67                <action android:name="android.intent.action.MAIN" />
+68
+69                <category android:name="android.intent.category.LAUNCHER" />
+70            </intent-filter>
+71        </activity>
+72        <!--
+73             Don't delete the meta-data below.
+74             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+75        -->
+76        <meta-data
+77            android:name="flutterEmbedding"
+78            android:value="2" />
+79
+80        <provider
+80-->[:image_picker_android] /home/kartikey/Documents/flutter_projects/dotpay-nasscom/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
+81            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+81-->[:image_picker_android] /home/kartikey/Documents/flutter_projects/dotpay-nasscom/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-82
+82            android:authorities="com.example.dotpay.flutter.image_provider"
+82-->[:image_picker_android] /home/kartikey/Documents/flutter_projects/dotpay-nasscom/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-74
+83            android:exported="false"
+83-->[:image_picker_android] /home/kartikey/Documents/flutter_projects/dotpay-nasscom/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
+84            android:grantUriPermissions="true" >
+84-->[:image_picker_android] /home/kartikey/Documents/flutter_projects/dotpay-nasscom/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
+85            <meta-data
+85-->[:image_picker_android] /home/kartikey/Documents/flutter_projects/dotpay-nasscom/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:75
+86                android:name="android.support.FILE_PROVIDER_PATHS"
+86-->[:image_picker_android] /home/kartikey/Documents/flutter_projects/dotpay-nasscom/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
+87                android:resource="@xml/flutter_image_picker_file_paths" />
+87-->[:image_picker_android] /home/kartikey/Documents/flutter_projects/dotpay-nasscom/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-72
+88        </provider>
+89
+90        <activity
+90-->[:url_launcher_android] /home/kartikey/Documents/flutter_projects/dotpay-nasscom/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-13:74
+91            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+91-->[:url_launcher_android] /home/kartikey/Documents/flutter_projects/dotpay-nasscom/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-74
+92            android:exported="false"
+92-->[:url_launcher_android] /home/kartikey/Documents/flutter_projects/dotpay-nasscom/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-37
+93            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+93-->[:url_launcher_android] /home/kartikey/Documents/flutter_projects/dotpay-nasscom/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-71
+94        <activity
+94-->[com.stripe:paymentsheet:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa0d34224582404f0d4bfc1144d1796a/transformed/jetified-paymentsheet-20.12.0/AndroidManifest.xml:10:9-13:69
+95            android:name="com.stripe.android.paymentsheet.PaymentSheetActivity"
+95-->[com.stripe:paymentsheet:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa0d34224582404f0d4bfc1144d1796a/transformed/jetified-paymentsheet-20.12.0/AndroidManifest.xml:11:13-80
+96            android:exported="false"
+96-->[com.stripe:paymentsheet:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa0d34224582404f0d4bfc1144d1796a/transformed/jetified-paymentsheet-20.12.0/AndroidManifest.xml:12:13-37
+97            android:theme="@style/StripePaymentSheetDefaultTheme" />
+97-->[com.stripe:paymentsheet:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa0d34224582404f0d4bfc1144d1796a/transformed/jetified-paymentsheet-20.12.0/AndroidManifest.xml:13:13-66
+98        <activity
+98-->[com.stripe:paymentsheet:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa0d34224582404f0d4bfc1144d1796a/transformed/jetified-paymentsheet-20.12.0/AndroidManifest.xml:14:9-17:69
+99            android:name="com.stripe.android.paymentsheet.PaymentOptionsActivity"
+99-->[com.stripe:paymentsheet:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa0d34224582404f0d4bfc1144d1796a/transformed/jetified-paymentsheet-20.12.0/AndroidManifest.xml:15:13-82
+100            android:exported="false"
+100-->[com.stripe:paymentsheet:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa0d34224582404f0d4bfc1144d1796a/transformed/jetified-paymentsheet-20.12.0/AndroidManifest.xml:16:13-37
+101            android:theme="@style/StripePaymentSheetDefaultTheme" />
+101-->[com.stripe:paymentsheet:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa0d34224582404f0d4bfc1144d1796a/transformed/jetified-paymentsheet-20.12.0/AndroidManifest.xml:17:13-66
+102        <activity
+102-->[com.stripe:paymentsheet:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa0d34224582404f0d4bfc1144d1796a/transformed/jetified-paymentsheet-20.12.0/AndroidManifest.xml:18:9-21:69
+103            android:name="com.stripe.android.paymentsheet.addresselement.AddressElementActivity"
+103-->[com.stripe:paymentsheet:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa0d34224582404f0d4bfc1144d1796a/transformed/jetified-paymentsheet-20.12.0/AndroidManifest.xml:19:13-97
+104            android:exported="false"
+104-->[com.stripe:paymentsheet:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa0d34224582404f0d4bfc1144d1796a/transformed/jetified-paymentsheet-20.12.0/AndroidManifest.xml:20:13-37
+105            android:theme="@style/StripePaymentSheetDefaultTheme" />
+105-->[com.stripe:paymentsheet:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa0d34224582404f0d4bfc1144d1796a/transformed/jetified-paymentsheet-20.12.0/AndroidManifest.xml:21:13-66
+106        <activity
+106-->[com.stripe:link:20.12.0] /home/kartikey/.gradle/caches/transforms-3/51cef1b0b96228235017afe267343a47/transformed/jetified-link-20.12.0/AndroidManifest.xml:10:9-14:52
+107            android:name="com.stripe.android.link.LinkActivity"
+107-->[com.stripe:link:20.12.0] /home/kartikey/.gradle/caches/transforms-3/51cef1b0b96228235017afe267343a47/transformed/jetified-link-20.12.0/AndroidManifest.xml:11:13-64
+108            android:exported="false"
+108-->[com.stripe:link:20.12.0] /home/kartikey/.gradle/caches/transforms-3/51cef1b0b96228235017afe267343a47/transformed/jetified-link-20.12.0/AndroidManifest.xml:12:13-37
+109            android:label="@string/link"
+109-->[com.stripe:link:20.12.0] /home/kartikey/.gradle/caches/transforms-3/51cef1b0b96228235017afe267343a47/transformed/jetified-link-20.12.0/AndroidManifest.xml:13:13-41
+110            android:theme="@style/LinkBaseTheme" />
+110-->[com.stripe:link:20.12.0] /home/kartikey/.gradle/caches/transforms-3/51cef1b0b96228235017afe267343a47/transformed/jetified-link-20.12.0/AndroidManifest.xml:14:13-49
+111        <activity
+111-->[com.stripe:financial-connections:20.12.0] /home/kartikey/.gradle/caches/transforms-3/47313b37266ecb09bc77180329857c67/transformed/jetified-financial-connections-20.12.0/AndroidManifest.xml:23:9-42:20
+112            android:name="com.stripe.android.financialconnections.FinancialConnectionsSheetRedirectActivity"
+112-->[com.stripe:financial-connections:20.12.0] /home/kartikey/.gradle/caches/transforms-3/47313b37266ecb09bc77180329857c67/transformed/jetified-financial-connections-20.12.0/AndroidManifest.xml:24:13-109
+113            android:exported="true" >
+113-->[com.stripe:financial-connections:20.12.0] /home/kartikey/.gradle/caches/transforms-3/47313b37266ecb09bc77180329857c67/transformed/jetified-financial-connections-20.12.0/AndroidManifest.xml:25:13-36
+114            <intent-filter>
+114-->[com.stripe:financial-connections:20.12.0] /home/kartikey/.gradle/caches/transforms-3/47313b37266ecb09bc77180329857c67/transformed/jetified-financial-connections-20.12.0/AndroidManifest.xml:26:13-41:29
+115                <action android:name="android.intent.action.VIEW" />
+115-->[com.stripe:financial-connections:20.12.0] /home/kartikey/.gradle/caches/transforms-3/47313b37266ecb09bc77180329857c67/transformed/jetified-financial-connections-20.12.0/AndroidManifest.xml:16:13-65
+115-->[com.stripe:financial-connections:20.12.0] /home/kartikey/.gradle/caches/transforms-3/47313b37266ecb09bc77180329857c67/transformed/jetified-financial-connections-20.12.0/AndroidManifest.xml:16:21-62
+116
+117                <category android:name="android.intent.category.DEFAULT" />
+117-->[com.stripe:financial-connections:20.12.0] /home/kartikey/.gradle/caches/transforms-3/47313b37266ecb09bc77180329857c67/transformed/jetified-financial-connections-20.12.0/AndroidManifest.xml:29:17-76
+117-->[com.stripe:financial-connections:20.12.0] /home/kartikey/.gradle/caches/transforms-3/47313b37266ecb09bc77180329857c67/transformed/jetified-financial-connections-20.12.0/AndroidManifest.xml:29:27-73
+118                <category android:name="android.intent.category.BROWSABLE" />
+118-->[com.stripe:financial-connections:20.12.0] /home/kartikey/.gradle/caches/transforms-3/47313b37266ecb09bc77180329857c67/transformed/jetified-financial-connections-20.12.0/AndroidManifest.xml:30:17-78
+118-->[com.stripe:financial-connections:20.12.0] /home/kartikey/.gradle/caches/transforms-3/47313b37266ecb09bc77180329857c67/transformed/jetified-financial-connections-20.12.0/AndroidManifest.xml:30:27-75
+119
+120                <!-- Accepts success and cancel URIs that begin with "stripe-auth://link-accounts” -->
+121                <data
+121-->[com.stripe:financial-connections:20.12.0] /home/kartikey/.gradle/caches/transforms-3/47313b37266ecb09bc77180329857c67/transformed/jetified-financial-connections-20.12.0/AndroidManifest.xml:18:13-43
+122                    android:host="link-accounts"
+123                    android:path="/com.example.dotpay/success"
+124                    android:scheme="stripe-auth" />
+124-->[com.stripe:financial-connections:20.12.0] /home/kartikey/.gradle/caches/transforms-3/47313b37266ecb09bc77180329857c67/transformed/jetified-financial-connections-20.12.0/AndroidManifest.xml:18:19-40
+125                <data
+125-->[com.stripe:financial-connections:20.12.0] /home/kartikey/.gradle/caches/transforms-3/47313b37266ecb09bc77180329857c67/transformed/jetified-financial-connections-20.12.0/AndroidManifest.xml:18:13-43
+126                    android:host="link-accounts"
+127                    android:path="/com.example.dotpay/cancel"
+128                    android:scheme="stripe-auth" />
+128-->[com.stripe:financial-connections:20.12.0] /home/kartikey/.gradle/caches/transforms-3/47313b37266ecb09bc77180329857c67/transformed/jetified-financial-connections-20.12.0/AndroidManifest.xml:18:19-40
+129            </intent-filter>
+130        </activity>
+131        <activity
+131-->[com.stripe:financial-connections:20.12.0] /home/kartikey/.gradle/caches/transforms-3/47313b37266ecb09bc77180329857c67/transformed/jetified-financial-connections-20.12.0/AndroidManifest.xml:43:9-46:57
+132            android:name="com.stripe.android.financialconnections.FinancialConnectionsSheetActivity"
+132-->[com.stripe:financial-connections:20.12.0] /home/kartikey/.gradle/caches/transforms-3/47313b37266ecb09bc77180329857c67/transformed/jetified-financial-connections-20.12.0/AndroidManifest.xml:44:13-101
+133            android:exported="false"
+133-->[com.stripe:financial-connections:20.12.0] /home/kartikey/.gradle/caches/transforms-3/47313b37266ecb09bc77180329857c67/transformed/jetified-financial-connections-20.12.0/AndroidManifest.xml:45:13-37
+134            android:theme="@style/StripeDefaultTheme" />
+134-->[com.stripe:financial-connections:20.12.0] /home/kartikey/.gradle/caches/transforms-3/47313b37266ecb09bc77180329857c67/transformed/jetified-financial-connections-20.12.0/AndroidManifest.xml:46:13-54
+135
+136        <provider
+136-->[com.stripe:financial-connections:20.12.0] /home/kartikey/.gradle/caches/transforms-3/47313b37266ecb09bc77180329857c67/transformed/jetified-financial-connections-20.12.0/AndroidManifest.xml:48:9-52:43
+137            android:name="com.stripe.android.financialconnections.appinitializer.FinancialConnectionsInitializer"
+137-->[com.stripe:financial-connections:20.12.0] /home/kartikey/.gradle/caches/transforms-3/47313b37266ecb09bc77180329857c67/transformed/jetified-financial-connections-20.12.0/AndroidManifest.xml:49:13-114
+138            android:authorities="com.example.dotpay.financialconnections-init"
+138-->[com.stripe:financial-connections:20.12.0] /home/kartikey/.gradle/caches/transforms-3/47313b37266ecb09bc77180329857c67/transformed/jetified-financial-connections-20.12.0/AndroidManifest.xml:50:13-77
+139            android:exported="false"
+139-->[com.stripe:financial-connections:20.12.0] /home/kartikey/.gradle/caches/transforms-3/47313b37266ecb09bc77180329857c67/transformed/jetified-financial-connections-20.12.0/AndroidManifest.xml:51:13-37
+140            android:multiprocess="true" />
+140-->[com.stripe:financial-connections:20.12.0] /home/kartikey/.gradle/caches/transforms-3/47313b37266ecb09bc77180329857c67/transformed/jetified-financial-connections-20.12.0/AndroidManifest.xml:52:13-40
+141
+142        <activity
+142-->[com.stripe:payments-ui-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/446d550dd51edc426f13e218d2bee196/transformed/jetified-payments-ui-core-20.12.0/AndroidManifest.xml:10:9-13:69
+143            android:name="com.stripe.android.ui.core.cardscan.CardScanActivity"
+143-->[com.stripe:payments-ui-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/446d550dd51edc426f13e218d2bee196/transformed/jetified-payments-ui-core-20.12.0/AndroidManifest.xml:11:13-80
+144            android:exported="false"
+144-->[com.stripe:payments-ui-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/446d550dd51edc426f13e218d2bee196/transformed/jetified-payments-ui-core-20.12.0/AndroidManifest.xml:12:13-37
+145            android:theme="@style/StripePaymentSheetDefaultTheme" />
+145-->[com.stripe:payments-ui-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/446d550dd51edc426f13e218d2bee196/transformed/jetified-payments-ui-core-20.12.0/AndroidManifest.xml:13:13-66
+146        <activity
+146-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:17:9-20:57
+147            android:name="com.stripe.android.view.AddPaymentMethodActivity"
+147-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:18:13-76
+148            android:exported="false"
+148-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:19:13-37
+149            android:theme="@style/StripeDefaultTheme" />
+149-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:20:13-54
+150        <activity
+150-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:21:9-24:57
+151            android:name="com.stripe.android.view.PaymentMethodsActivity"
+151-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:22:13-74
+152            android:exported="false"
+152-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:23:13-37
+153            android:theme="@style/StripeDefaultTheme" />
+153-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:24:13-54
+154        <activity
+154-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:25:9-28:57
+155            android:name="com.stripe.android.view.PaymentFlowActivity"
+155-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:26:13-71
+156            android:exported="false"
+156-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:27:13-37
+157            android:theme="@style/StripeDefaultTheme" />
+157-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:28:13-54
+158        <activity
+158-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:29:9-33:58
+159            android:name="com.stripe.android.view.PaymentAuthWebViewActivity"
+159-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:30:13-78
+160            android:exported="false"
+160-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:31:13-37
+161            android:theme="@style/StripeDefaultTheme"
+161-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:32:13-54
+162            android:windowSoftInputMode="adjustResize" />
+162-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:33:13-55
+163        <activity
+163-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:34:9-37:61
+164            android:name="com.stripe.android.view.PaymentRelayActivity"
+164-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:35:13-72
+165            android:exported="false"
+165-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:36:13-37
+166            android:theme="@style/StripeTransparentTheme" />
+166-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:37:13-58
+167        <!--
+168        Set android:launchMode="singleTop" so that the StripeBrowserLauncherActivity instance that
+169        launched the browser Activity will also handle the return URL deep link.
+170        -->
+171        <activity
+171-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:43:9-47:61
+172            android:name="com.stripe.android.payments.StripeBrowserLauncherActivity"
+172-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:44:13-85
+173            android:exported="false"
+173-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:45:13-37
+174            android:launchMode="singleTask"
+174-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:46:13-44
+175            android:theme="@style/StripeTransparentTheme" />
+175-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:47:13-58
+176        <activity
+176-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:48:9-65:20
+177            android:name="com.stripe.android.payments.StripeBrowserProxyReturnActivity"
+177-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:49:13-88
+178            android:exported="true"
+178-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:50:13-36
+179            android:launchMode="singleTask"
+179-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:51:13-44
+180            android:theme="@style/StripeTransparentTheme" >
+180-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:52:13-58
+181            <intent-filter>
+181-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:53:13-64:29
+182                <action android:name="android.intent.action.VIEW" />
+182-->[com.stripe:financial-connections:20.12.0] /home/kartikey/.gradle/caches/transforms-3/47313b37266ecb09bc77180329857c67/transformed/jetified-financial-connections-20.12.0/AndroidManifest.xml:16:13-65
+182-->[com.stripe:financial-connections:20.12.0] /home/kartikey/.gradle/caches/transforms-3/47313b37266ecb09bc77180329857c67/transformed/jetified-financial-connections-20.12.0/AndroidManifest.xml:16:21-62
+183
+184                <category android:name="android.intent.category.DEFAULT" />
+184-->[com.stripe:financial-connections:20.12.0] /home/kartikey/.gradle/caches/transforms-3/47313b37266ecb09bc77180329857c67/transformed/jetified-financial-connections-20.12.0/AndroidManifest.xml:29:17-76
+184-->[com.stripe:financial-connections:20.12.0] /home/kartikey/.gradle/caches/transforms-3/47313b37266ecb09bc77180329857c67/transformed/jetified-financial-connections-20.12.0/AndroidManifest.xml:29:27-73
+185                <category android:name="android.intent.category.BROWSABLE" />
+185-->[com.stripe:financial-connections:20.12.0] /home/kartikey/.gradle/caches/transforms-3/47313b37266ecb09bc77180329857c67/transformed/jetified-financial-connections-20.12.0/AndroidManifest.xml:30:17-78
+185-->[com.stripe:financial-connections:20.12.0] /home/kartikey/.gradle/caches/transforms-3/47313b37266ecb09bc77180329857c67/transformed/jetified-financial-connections-20.12.0/AndroidManifest.xml:30:27-75
+186
+187                <!-- Must match `DefaultReturnUrl#value`. -->
+188                <data
+188-->[com.stripe:financial-connections:20.12.0] /home/kartikey/.gradle/caches/transforms-3/47313b37266ecb09bc77180329857c67/transformed/jetified-financial-connections-20.12.0/AndroidManifest.xml:18:13-43
+189                    android:host="payment_return_url"
+190                    android:path="/com.example.dotpay"
+191                    android:scheme="stripesdk" />
+191-->[com.stripe:financial-connections:20.12.0] /home/kartikey/.gradle/caches/transforms-3/47313b37266ecb09bc77180329857c67/transformed/jetified-financial-connections-20.12.0/AndroidManifest.xml:18:19-40
+192            </intent-filter>
+193        </activity>
+194        <activity
+194-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:66:9-69:57
+195            android:name="com.stripe.android.payments.core.authentication.threeds2.Stripe3ds2TransactionActivity"
+195-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:67:13-114
+196            android:exported="false"
+196-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:68:13-37
+197            android:theme="@style/StripeDefaultTheme" />
+197-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:69:13-54
+198        <activity
+198-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:70:9-73:66
+199            android:name="com.stripe.android.googlepaylauncher.StripeGooglePayActivity"
+199-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:71:13-88
+200            android:exported="false"
+200-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:72:13-37
+201            android:theme="@style/StripeGooglePayDefaultTheme" />
+201-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:73:13-63
+202        <activity
+202-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:74:9-77:66
+203            android:name="com.stripe.android.googlepaylauncher.GooglePayLauncherActivity"
+203-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:75:13-90
+204            android:exported="false"
+204-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:76:13-37
+205            android:theme="@style/StripeGooglePayDefaultTheme" />
+205-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:77:13-63
+206        <activity
+206-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:78:9-81:66
+207            android:name="com.stripe.android.googlepaylauncher.GooglePayPaymentMethodLauncherActivity"
+207-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:79:13-103
+208            android:exported="false"
+208-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:80:13-37
+209            android:theme="@style/StripeGooglePayDefaultTheme" />
+209-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:81:13-63
+210        <activity
+210-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:82:9-85:62
+211            android:name="com.stripe.android.payments.paymentlauncher.PaymentLauncherConfirmationActivity"
+211-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:83:13-107
+212            android:exported="false"
+212-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:84:13-37
+213            android:theme="@style/PayLauncherDefaultTheme" />
+213-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:85:13-59
+214        <activity
+214-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:86:9-89:61
+215            android:name="com.stripe.android.payments.bankaccount.ui.CollectBankAccountActivity"
+215-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:87:13-97
+216            android:exported="false"
+216-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:88:13-37
+217            android:theme="@style/StripeTransparentTheme" />
+217-->[com.stripe:payments-core:20.12.0] /home/kartikey/.gradle/caches/transforms-3/fa8e7a79925463b833ea84a2e99d36ec/transformed/jetified-payments-core-20.12.0/AndroidManifest.xml:89:13-58
+218        <activity
+218-->[com.stripe:stripe-3ds2-android:6.1.5] /home/kartikey/.gradle/caches/transforms-3/402a3ed6ae9f27618a86d4111d7c2d82/transformed/jetified-stripe-3ds2-android-6.1.5/AndroidManifest.xml:10:9-13:54
+219            android:name="com.stripe.android.stripe3ds2.views.ChallengeActivity"
+219-->[com.stripe:stripe-3ds2-android:6.1.5] /home/kartikey/.gradle/caches/transforms-3/402a3ed6ae9f27618a86d4111d7c2d82/transformed/jetified-stripe-3ds2-android-6.1.5/AndroidManifest.xml:11:13-81
+220            android:exported="false"
+220-->[com.stripe:stripe-3ds2-android:6.1.5] /home/kartikey/.gradle/caches/transforms-3/402a3ed6ae9f27618a86d4111d7c2d82/transformed/jetified-stripe-3ds2-android-6.1.5/AndroidManifest.xml:12:13-37
+221            android:theme="@style/Stripe3DS2Theme" /> <!-- Needs to be explicitly declared on P+ -->
+221-->[com.stripe:stripe-3ds2-android:6.1.5] /home/kartikey/.gradle/caches/transforms-3/402a3ed6ae9f27618a86d4111d7c2d82/transformed/jetified-stripe-3ds2-android-6.1.5/AndroidManifest.xml:13:13-51
+222        <uses-library
+222-->[com.google.android.gms:play-services-maps:18.0.2] /home/kartikey/.gradle/caches/transforms-3/42e8e193afdde6a89d257fba9624cf99/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:39:9-41:40
+223            android:name="org.apache.http.legacy"
+223-->[com.google.android.gms:play-services-maps:18.0.2] /home/kartikey/.gradle/caches/transforms-3/42e8e193afdde6a89d257fba9624cf99/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:40:13-50
+224            android:required="false" />
+224-->[com.google.android.gms:play-services-maps:18.0.2] /home/kartikey/.gradle/caches/transforms-3/42e8e193afdde6a89d257fba9624cf99/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:41:13-37
+225
+226        <activity
+226-->[com.google.android.gms:play-services-base:18.0.1] /home/kartikey/.gradle/caches/transforms-3/3ff720be07735976176520d1c05fb799/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+227            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+227-->[com.google.android.gms:play-services-base:18.0.1] /home/kartikey/.gradle/caches/transforms-3/3ff720be07735976176520d1c05fb799/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+228            android:exported="false"
+228-->[com.google.android.gms:play-services-base:18.0.1] /home/kartikey/.gradle/caches/transforms-3/3ff720be07735976176520d1c05fb799/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+229            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+229-->[com.google.android.gms:play-services-base:18.0.1] /home/kartikey/.gradle/caches/transforms-3/3ff720be07735976176520d1c05fb799/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+230
+231        <meta-data
+231-->[com.google.android.gms:play-services-basement:18.0.0] /home/kartikey/.gradle/caches/transforms-3/601d4158b382ad9f634d3bbb23a34c83/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:21:9-23:69
+232            android:name="com.google.android.gms.version"
+232-->[com.google.android.gms:play-services-basement:18.0.0] /home/kartikey/.gradle/caches/transforms-3/601d4158b382ad9f634d3bbb23a34c83/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:22:13-58
+233            android:value="@integer/google_play_services_version" />
+233-->[com.google.android.gms:play-services-basement:18.0.0] /home/kartikey/.gradle/caches/transforms-3/601d4158b382ad9f634d3bbb23a34c83/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:23:13-66
+234
+235        <uses-library
+235-->[androidx.window:window:1.0.0-beta04] /home/kartikey/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+236            android:name="androidx.window.extensions"
+236-->[androidx.window:window:1.0.0-beta04] /home/kartikey/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+237            android:required="false" />
+237-->[androidx.window:window:1.0.0-beta04] /home/kartikey/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+238        <uses-library
+238-->[androidx.window:window:1.0.0-beta04] /home/kartikey/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+239            android:name="androidx.window.sidecar"
+239-->[androidx.window:window:1.0.0-beta04] /home/kartikey/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+240            android:required="false" />
+240-->[androidx.window:window:1.0.0-beta04] /home/kartikey/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+241
+242        <provider
+242-->[androidx.emoji2:emoji2:1.2.0] /home/kartikey/.gradle/caches/transforms-3/9fc546b4b41c30406c1c6f8de93a0c6d/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+243            android:name="androidx.startup.InitializationProvider"
+243-->[androidx.emoji2:emoji2:1.2.0] /home/kartikey/.gradle/caches/transforms-3/9fc546b4b41c30406c1c6f8de93a0c6d/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+244            android:authorities="com.example.dotpay.androidx-startup"
+244-->[androidx.emoji2:emoji2:1.2.0] /home/kartikey/.gradle/caches/transforms-3/9fc546b4b41c30406c1c6f8de93a0c6d/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+245            android:exported="false" >
+245-->[androidx.emoji2:emoji2:1.2.0] /home/kartikey/.gradle/caches/transforms-3/9fc546b4b41c30406c1c6f8de93a0c6d/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+246            <meta-data
+246-->[androidx.emoji2:emoji2:1.2.0] /home/kartikey/.gradle/caches/transforms-3/9fc546b4b41c30406c1c6f8de93a0c6d/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+247                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+247-->[androidx.emoji2:emoji2:1.2.0] /home/kartikey/.gradle/caches/transforms-3/9fc546b4b41c30406c1c6f8de93a0c6d/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+248                android:value="androidx.startup" />
+248-->[androidx.emoji2:emoji2:1.2.0] /home/kartikey/.gradle/caches/transforms-3/9fc546b4b41c30406c1c6f8de93a0c6d/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+249            <meta-data
+249-->[androidx.profileinstaller:profileinstaller:1.2.0] /home/kartikey/.gradle/caches/transforms-3/4c5fc5ec0ffa1aed0936a94c773b7954/transformed/jetified-profileinstaller-1.2.0/AndroidManifest.xml:30:13-32:52
+250                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+250-->[androidx.profileinstaller:profileinstaller:1.2.0] /home/kartikey/.gradle/caches/transforms-3/4c5fc5ec0ffa1aed0936a94c773b7954/transformed/jetified-profileinstaller-1.2.0/AndroidManifest.xml:31:17-85
+251                android:value="androidx.startup" />
+251-->[androidx.profileinstaller:profileinstaller:1.2.0] /home/kartikey/.gradle/caches/transforms-3/4c5fc5ec0ffa1aed0936a94c773b7954/transformed/jetified-profileinstaller-1.2.0/AndroidManifest.xml:32:17-49
+252            <meta-data
+252-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/kartikey/.gradle/caches/transforms-3/c7dc2d946f639e7b414f5fbe78913a76/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+253                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+253-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/kartikey/.gradle/caches/transforms-3/c7dc2d946f639e7b414f5fbe78913a76/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+254                android:value="androidx.startup" />
+254-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/kartikey/.gradle/caches/transforms-3/c7dc2d946f639e7b414f5fbe78913a76/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+255        </provider>
+256
+257        <receiver
+257-->[androidx.profileinstaller:profileinstaller:1.2.0] /home/kartikey/.gradle/caches/transforms-3/4c5fc5ec0ffa1aed0936a94c773b7954/transformed/jetified-profileinstaller-1.2.0/AndroidManifest.xml:35:9-47:20
+258            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+258-->[androidx.profileinstaller:profileinstaller:1.2.0] /home/kartikey/.gradle/caches/transforms-3/4c5fc5ec0ffa1aed0936a94c773b7954/transformed/jetified-profileinstaller-1.2.0/AndroidManifest.xml:36:13-76
+259            android:directBootAware="false"
+259-->[androidx.profileinstaller:profileinstaller:1.2.0] /home/kartikey/.gradle/caches/transforms-3/4c5fc5ec0ffa1aed0936a94c773b7954/transformed/jetified-profileinstaller-1.2.0/AndroidManifest.xml:37:13-44
+260            android:enabled="true"
+260-->[androidx.profileinstaller:profileinstaller:1.2.0] /home/kartikey/.gradle/caches/transforms-3/4c5fc5ec0ffa1aed0936a94c773b7954/transformed/jetified-profileinstaller-1.2.0/AndroidManifest.xml:38:13-35
+261            android:exported="true"
+261-->[androidx.profileinstaller:profileinstaller:1.2.0] /home/kartikey/.gradle/caches/transforms-3/4c5fc5ec0ffa1aed0936a94c773b7954/transformed/jetified-profileinstaller-1.2.0/AndroidManifest.xml:39:13-36
+262            android:permission="android.permission.DUMP" >
+262-->[androidx.profileinstaller:profileinstaller:1.2.0] /home/kartikey/.gradle/caches/transforms-3/4c5fc5ec0ffa1aed0936a94c773b7954/transformed/jetified-profileinstaller-1.2.0/AndroidManifest.xml:40:13-57
+263            <intent-filter>
+263-->[androidx.profileinstaller:profileinstaller:1.2.0] /home/kartikey/.gradle/caches/transforms-3/4c5fc5ec0ffa1aed0936a94c773b7954/transformed/jetified-profileinstaller-1.2.0/AndroidManifest.xml:41:13-43:29
+264                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+264-->[androidx.profileinstaller:profileinstaller:1.2.0] /home/kartikey/.gradle/caches/transforms-3/4c5fc5ec0ffa1aed0936a94c773b7954/transformed/jetified-profileinstaller-1.2.0/AndroidManifest.xml:42:17-91
+264-->[androidx.profileinstaller:profileinstaller:1.2.0] /home/kartikey/.gradle/caches/transforms-3/4c5fc5ec0ffa1aed0936a94c773b7954/transformed/jetified-profileinstaller-1.2.0/AndroidManifest.xml:42:25-88
+265            </intent-filter>
+266            <intent-filter>
+266-->[androidx.profileinstaller:profileinstaller:1.2.0] /home/kartikey/.gradle/caches/transforms-3/4c5fc5ec0ffa1aed0936a94c773b7954/transformed/jetified-profileinstaller-1.2.0/AndroidManifest.xml:44:13-46:29
+267                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+267-->[androidx.profileinstaller:profileinstaller:1.2.0] /home/kartikey/.gradle/caches/transforms-3/4c5fc5ec0ffa1aed0936a94c773b7954/transformed/jetified-profileinstaller-1.2.0/AndroidManifest.xml:45:17-85
+267-->[androidx.profileinstaller:profileinstaller:1.2.0] /home/kartikey/.gradle/caches/transforms-3/4c5fc5ec0ffa1aed0936a94c773b7954/transformed/jetified-profileinstaller-1.2.0/AndroidManifest.xml:45:25-82
+268            </intent-filter>
+269        </receiver>
+270
+271        <meta-data
+271-->[com.google.android.instantapps:instantapps:1.1.0] /home/kartikey/.gradle/caches/transforms-3/5b49f25d3f315cd0ac26ccfa1a0a0bcb/transformed/jetified-instantapps-1.1.0/AndroidManifest.xml:10:9-12:33
+272            android:name="aia-compat-api-min-version"
+272-->[com.google.android.instantapps:instantapps:1.1.0] /home/kartikey/.gradle/caches/transforms-3/5b49f25d3f315cd0ac26ccfa1a0a0bcb/transformed/jetified-instantapps-1.1.0/AndroidManifest.xml:11:13-54
+273            android:value="1" />
+273-->[com.google.android.instantapps:instantapps:1.1.0] /home/kartikey/.gradle/caches/transforms-3/5b49f25d3f315cd0ac26ccfa1a0a0bcb/transformed/jetified-instantapps-1.1.0/AndroidManifest.xml:12:13-30
+274    </application>
+275
+276</manifest>
