@@ -99,4 +99,21 @@ p {
     @apply px-4 py-3 outline-none;
     @apply my-3;
   }
+
+  .form-input {
+    @apply bg-transparent px-2 py-4 text-white;
+    @apply focus:outline-none border-b-2 border-white;
+    @apply min-w-[70%];
+  }
+
+  .form-input::placeholder {
+    @apply text-black;
+  }
+
+  .form-button {
+    @apply px-4 py-2 bg-white text-accent;
+    @apply min-w-[160px] rounded-md;
+    @apply transition-all duration-200;
+    @apply hover:bg-accent hover:text-white hover:border-white border-transparent border-2;
+  }
 }

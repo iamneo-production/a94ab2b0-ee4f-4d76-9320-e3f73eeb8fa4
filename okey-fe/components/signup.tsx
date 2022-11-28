@@ -90,14 +90,39 @@ const Signup = () => {
       }}
     >
       {({ values, errors, touched }) => (
-        <Form className="flex flex-col gap-4 max-w-sm items-center justify-center mx-auto">
+        <Form className="flex flex-col gap-4 max-w-md w-full items-center justify-center mx-auto">
           {step == 0 && (
             <>
-              <Field type="text" name="phone" placeholder="phone" />
-              <Field type="text" name="name" placeholder="name" />
-              <Field type="number" name="age" placeholder="age" />
-              <Field type="email" name="email" placeholder="Email" />
-              <Field type="text" name="pin" placeholder="pin" />
+              <Field
+                className="form-input"
+                type="text"
+                name="phone"
+                placeholder="phone"
+              />
+              <Field
+                className="form-input"
+                type="text"
+                name="name"
+                placeholder="name"
+              />
+              <Field
+                className="form-input"
+                type="number"
+                name="age"
+                placeholder="age"
+              />
+              <Field
+                className="form-input"
+                type="email"
+                name="email"
+                placeholder="Email"
+              />
+              <Field
+                className="form-input"
+                type="text"
+                name="pin"
+                placeholder="pin"
+              />
             </>
           )}
 
@@ -116,9 +141,13 @@ const Signup = () => {
               <Field type="text" name="phone" placeholder="number" />
             </>
           )}
-          <button type="submit">Submit</button>
-          <button onClick={() => setStep(1)}>Next</button>
-          <pre>{JSON.stringify(errors, null, 2)}</pre>
+          <button className="form-button" type="submit">
+            Submit
+          </button>
+          <button className="form-button" onClick={() => setStep(1)}>
+            Next
+          </button>
+          {/* <pre>{JSON.stringify(errors, null, 2)}</pre> */}
         </Form>
       )}
     </Formik>
