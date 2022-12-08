@@ -5,7 +5,6 @@ import database from "../../loaders/database";
 import errorClass from "../../shared/error";
 import { Response } from "express";
 import { KycRequest } from "./routes";
-import { WithId } from "mongodb";
 
 export const register = async (
   req: KycRequest,
