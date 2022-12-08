@@ -5,6 +5,7 @@ import database from "../../loaders/database";
 import errorClass from "../../shared/error";
 import { Response } from "express";
 import { KycRequest } from "./routes";
+import { WithId } from "mongodb";
 
 export const register = async (
   req: KycRequest,
@@ -25,10 +26,12 @@ export const register = async (
       .collection("users")
       .findOne({ email: req.body.email });
 
+    const okeyID = Math.floor(Math.random() * 99999 + 100000);
     // Adding user
     const newUser: any = {
       ...req.body,
       dp_id: dpUser?._id,
+      okey_id: okeyID,
       pin: await hash(pin, 14),
     };
 
@@ -43,21 +46,44 @@ export const register = async (
   }
 };
 
-export const userLogin = async (
+export const userLogin: (
+  okey_id: number,
+  email: string,
+  pin: string,
+  next: NextFunction,
+  res: Response,
+) => Promise<
+  | {
+      key?: string;
+      user?: any;
+    }
+  | undefined
+> = async (
+  okey_id: number,
   email: string,
   pin: string,
   next: NextFunction,
   res: Response,
 ) => {
   try {
-    const databaseResponse = await (await database())
-      .collection("kyc-users")
-      .findOne({ email });
-
-    if (databaseResponse === null) throw Error("User does not exist");
+    let databaseResponse;
+    if (email)
+      databaseResponse = await (await database())
+        .collection("kyc-users")
+        .findOne({ email });
+    else if (okey_id)
+      databaseResponse = await (await database())
+        .collection("kyc-users")
+        .findOne({ okey_id });
+    if (databaseResponse === null || databaseResponse === undefined)
+      throw Error("User does not exist");
     if (!(await compare(pin, databaseResponse.pin)))
       throw Error("Invalid credentials");
-    return await signJwt({ email, role: "admin" });
+    delete databaseResponse.pin;
+    return {
+      key: await signJwt({ email, role: "admin" }),
+      user: databaseResponse,
+    };
   } catch (error) {
     next(new errorClass(res, error.message, 501));
     return;

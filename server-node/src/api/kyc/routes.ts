@@ -16,6 +16,11 @@ export interface KycRequest extends Request {
 export const KycRouteHandler = () => {
   app.post("/login", requestValidation("body", loginSchema), loginUserHandler);
   app.post(
+    "/user-details",
+    requestValidation("body", loginSchema),
+    getDetailsHandler,
+  );
+  app.post(
     "/register",
     requestValidation("body", registerSchema),
     createKycUser,
@@ -38,11 +43,17 @@ const loginUserHandler = async (
   next: NextFunction,
 ) => {
   try {
-    const jwt = await userLogin(req.body.email, req.body.pin, next, res);
-    if (jwt) {
+    const data = await userLogin(
+      req.body.okey_id,
+      req.body.email,
+      req.body.pin,
+      next,
+      res,
+    );
+    if (data) {
       res.json({
         success: true,
-        key: jwt,
+        ...data,
         message: "User Logged In Successfully",
       });
     }
@@ -88,14 +99,43 @@ const uploadHandler = async (
   next: NextFunction,
 ) => {
   try {
-    console.log(req.file.location);
+    console.log(req.file?.location);
 
     let url = req.file?.location;
-    url = url?.split("/");
-    url[2] = url[2]?.split(".")?.slice(1)?.join(".");
-    url = url?.join("/");
+    if (url) {
+      url = url?.split("/");
+      url[2] = url[2]?.split(".")?.slice(1)?.join(".");
+      url = url?.join("/");
+    } else {
+      throw new Error("No image found");
+    }
 
     res.json({ success: true, data: url });
+  } catch (error) {
+    next(new errorClass(res, error.message, 401));
+  }
+};
+const getDetailsHandler = async (
+  req: KycRequest,
+  res: Response,
+  next: NextFunction,
+) => {
+  try {
+    const data = await userLogin(
+      req.body.okey_id,
+      req.body.email,
+      req.body.pin,
+      next,
+      res,
+    );
+    if (data) {
+      delete data.key;
+      res.json({
+        success: true,
+        ...data,
+        message: "User Details successfully retreived",
+      });
+    }
   } catch (error) {
     next(new errorClass(res, error.message, 401));
   }

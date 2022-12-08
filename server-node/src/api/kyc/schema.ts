@@ -1,7 +1,9 @@
 import * as yup from "yup";
 
 const kycLogin = {
-  email: yup.string().email().required(),
+  email: yup.string().email(),
+  okey_id: yup.number(),
+
   pin: yup.string().required(),
 };
 
